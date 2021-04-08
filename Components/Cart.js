@@ -11,9 +11,9 @@ const Container = styled.div`
 	width: 300px;
 	min-height: 100vh;
 	background-color: white;
-	box-shadow: 0 0 29px rgba(0,0,0,0.15);
+	box-shadow: 0 0 ${props => props.isOpen ? '29px' : '0px'} rgba(0,0,0,0.15);
 	transform: translateX(${props => props.isOpen ? '0' : '100%'});
-	transition: transform 0.2s ease-in;
+	transition: boxShadow 0.2s ease in, transform 0.2s ease-in;
 `;
 
 const XContainer = styled.div`
